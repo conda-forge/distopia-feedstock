@@ -1,5 +1,5 @@
 {% set name = "distopia" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/distopia-{{ version }}.tar.gz
-  sha256: 347bb33b09c3f62c058fe29a48efeaa6fe93870fe2a02447c05fb2d700d5548c
+  sha256: a304d0000a397a2cb97f8c82d02655478eec8df20a858e82c2021bfaaf441d7f
 
 build:
   script: "{{ PYTHON }} -m pip install . -vv"
-  number: 2
+  number: 0
 
 requirements:
   build:
