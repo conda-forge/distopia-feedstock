@@ -27,7 +27,7 @@ requirements:
     - versioneer >=0.26
   run:
     - python
-    - {{ pin_compatible('numpy') }}
+    - {{ pin_compatible('numpy', lower_bound='1.20.0') }}
 
 test:
   imports:
