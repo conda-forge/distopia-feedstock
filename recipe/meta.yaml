@@ -11,12 +11,13 @@ source:
 
 build:
   script: "{{ PYTHON }} -m pip install . -vv"
-  number: 2
+  number: 3
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cmake
     - make 
   host:
@@ -29,7 +30,6 @@ requirements:
     - make
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
