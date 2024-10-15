@@ -1,17 +1,20 @@
 {% set name = "distopia" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/distopia-{{ version }}.tar.gz
-  sha256: a304d0000a397a2cb97f8c82d02655478eec8df20a858e82c2021bfaaf441d7f
+  git_url: https://github.com/MDAnalysis/{{ name }}.git
+  git_rev: {{ version }}
+  git_depth: -1
+
 
 build:
+  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
-  number: 3
+  number: 0
 
 requirements:
   build:
@@ -19,17 +22,23 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - cmake
-    - make 
+    - make
+    - pip
+    - python >=3.6
+    - versioningit
+
   host:
-    - python
+    - python >=3.6
     - pip
     - numpy
     - scikit-build
     - cython
-    - versioneer >=0.26
+    - versioningit
     - make
+    - ninja
   run:
     - python
+    - numpy
 
 test:
   imports:
