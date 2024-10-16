@@ -14,6 +14,8 @@ source:
 build:
   script: "{{ PYTHON }} -m pip install . -vv"
   number: 0
+  skip: true  # [py>312]
+  skip: true  # [py<39]
   script_env:
    - SKBUILD_CONFIGURE_OPTIONS=-DDISTOPIA_BUILD_TESTS=OFF -DDISTOPIA_USE_EXTERNAL_HWY=ON
 
