@@ -35,7 +35,7 @@ requirements:
     - pip
     - numpy
     - scikit-build >=0.17 # for SKBUILD_CONFIGURE_OPTIONS
-    - cython <
+    - cython <3.0a0
     - versioningit
     - make
     - ninja
