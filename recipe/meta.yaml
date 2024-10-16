@@ -28,8 +28,7 @@ requirements:
     - pip
     - python >=3.6
     - versioningit
-    - cython
-
+    - cython <3.0a0
   host:
     - python >=3.6
     - pip
