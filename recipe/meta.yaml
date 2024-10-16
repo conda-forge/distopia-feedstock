@@ -26,12 +26,12 @@ requirements:
     - cmake
     - make
     - pip
-    - python >=3.6
+    - python
     - versioningit
     - cython
     - numpy
   host:
-    - python >=3.6
+    - python
     - pip
     - numpy
     - scikit-build >=0.17 # for SKBUILD_CONFIGURE_OPTIONS
@@ -41,7 +41,7 @@ requirements:
     - ninja
     - libhwy
   run:
-    - python >=3.6
+    - python
     - numpy
     - libhwy
 
