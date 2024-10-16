@@ -1,5 +1,5 @@
 {% set name = "distopia" %}
-{% set version = "0.3.0-rc2" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/MDAnalysis/{{ name }}.git
-  git_rev: {{ version }}
+  git_rev: "12930af"
   git_depth: -1
 
 
@@ -16,7 +16,7 @@ build:
   script: "{{ PYTHON }} -m pip install . -vv"
   number: 0
   script_env:
-   - SKBUILD_CONFIGURE_OPTIONS="-DDISTOPIA_BUILD_TESTS=OFF -DDISTOPIA_USE_EXTERNAL_HWY=ON"
+   - SKBUILD_CONFIGURE_OPTIONS=-DDISTOPIA_BUILD_TESTS=OFF -DDISTOPIA_USE_EXTERNAL_HWY=ON
 
 requirements:
   build:
@@ -33,7 +33,7 @@ requirements:
     - python >=3.6
     - pip
     - numpy
-    - scikit-build >= 0.17 # for 
+    - scikit-build >=0.17 # for SKBUILD_CONFIGURE_OPTIONS
     - cython
     - versioningit
     - make
