@@ -38,7 +38,7 @@ requirements:
     - versioningit
     - make
     - ninja
-    - hwy
+    - libhwy
   run:
     - python >=3.6
     - numpy
