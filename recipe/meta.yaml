@@ -32,7 +32,7 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - numpy
+    - numpy <2.0a0
     - scikit-build >=0.17 # for SKBUILD_CONFIGURE_OPTIONS
     - cython
     - versioningit
@@ -41,7 +41,8 @@ requirements:
     - libhwy
   run:
     - python >=3.6
-    - numpy
+    - numpy {{ numpy }}
+    - libhwy
 
 test:
   imports:
