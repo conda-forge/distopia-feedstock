@@ -28,20 +28,20 @@ requirements:
     - pip
     - python >=3.6
     - versioningit
-    - cython
+    - cython <=3.0.7
   host:
     - python >=3.6
     - pip
-    - numpy <2.0a0
+    - numpy
     - scikit-build >=0.17 # for SKBUILD_CONFIGURE_OPTIONS
-    - cython
+    - cython <=3.0.7
     - versioningit
     - make
     - ninja
     - libhwy
   run:
     - python >=3.6
-    - numpy {{ numpy }}
+    - numpy
     - libhwy
 
 test:
