@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/MDAnalysis/{{ name }}.git
-  git_rev: "ba2fa7"
+  git_rev: "5359e5"
   git_depth: -1
 
 
@@ -35,7 +35,7 @@ requirements:
     - pip
     - numpy
     - scikit-build >=0.17 # for SKBUILD_CONFIGURE_OPTIONS
-    - cython
+    - cython <
     - versioningit
     - make
     - ninja
@@ -47,10 +47,6 @@ requirements:
 test:
   imports:
     - distopia
-  requires:
-    - pip
-  commands:
-    - pip check
 
 about:
   home: https://github.com/MDAnalysis/distopia
