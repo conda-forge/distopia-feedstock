@@ -28,13 +28,14 @@ requirements:
     - pip
     - python >=3.6
     - versioningit
-    - cython <=3.0.7
+    - cython
+    - numpy
   host:
     - python >=3.6
     - pip
     - numpy
     - scikit-build >=0.17 # for SKBUILD_CONFIGURE_OPTIONS
-    - cython <=3.0.7
+    - cython
     - versioningit
     - make
     - ninja
