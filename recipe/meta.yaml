@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/MDAnalysis/{{ name }}.git
-  git_rev: "12930af"
+  git_rev: "ba2fa7"
   git_depth: -1
 
 
