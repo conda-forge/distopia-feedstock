@@ -7,18 +7,17 @@ package:
 
 source:
   git_url: https://github.com/MDAnalysis/{{ name }}.git
-  git_rev: "5359e51"
+  git_rev: "d8d0e4a"
   git_depth: -1
 
 
 build:
-  script: "{{ PYTHON }} setup.py install"
+  script: "{{ PYTHON }} -m pip install . -vv"
   number: 0
   script_env:
    - SKBUILD_CONFIGURE_OPTIONS=-DDISTOPIA_BUILD_TESTS=OFF -DDISTOPIA_USE_EXTERNAL_HWY=ON
-  detect_binary_files_with_prefix: False
-  ignore_prefix_files: True
 
+  
 requirements:
   build:
     - {{ compiler('cxx') }}
