@@ -1,5 +1,5 @@
 {% set name = "distopia" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   script: "{{ PYTHON }} -m pip install . -vv"
-  number: 3
+  number: 0
   skip: true  # [py<39]
   skip: true  # [win]
   script_env:
