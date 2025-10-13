@@ -1,5 +1,5 @@
 {% set name = "distopia" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -13,8 +13,8 @@ source:
 
 build:
   script: "{{ PYTHON }} -m pip install . -vv"
-  number: 2
-  skip: true  # [py<39]
+  number: 0
+  skip: true  # [py<311]
   skip: true  # [win]
   script_env:
    - SKBUILD_CONFIGURE_OPTIONS=-DDISTOPIA_BUILD_TESTS=OFF -DDISTOPIA_USE_EXTERNAL_HWY=ON
