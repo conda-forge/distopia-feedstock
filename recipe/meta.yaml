@@ -13,7 +13,7 @@ source:
 
 build:
   script: "{{ PYTHON }} -m pip install . -vv"
-  number: 0
+  number: 1
   skip: true  # [py<311]
   skip: true  # [win]
   script_env:
@@ -57,8 +57,9 @@ about:
   summary: Fast distance calculations using explicitly vectorised SIMD
   description: |
     Distopia is a package to rapidly calculate distances under periodic boundary conditions. 
-    Explicit SIMD vectorisation allows awesome speedups over autovectorised code.
-    The distopia package consists of consists of the python layer (distopia)
+    Explicit SIMD vectorisation (provided by the Highway library https://github.com/google/highway)
+    allows awesome speedups over autovectorised code.
+    The distopia package consists of the python layer (distopia)
     and a C++ library (libdistopia) that does the heavy lifting.
 
   license: MIT
