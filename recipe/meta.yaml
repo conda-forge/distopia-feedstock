@@ -13,7 +13,7 @@ source:
 
 build:
   script: "{{ PYTHON }} -m pip install . -vv"
-  number: 0
+  number: 1
   skip: true  # [py<311]
   skip: true  # [win]
   script_env:
@@ -26,12 +26,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - cmake
-    - make
-    - pip
-    - python
-    - versioningit
-    - cython
-    - numpy
+    - make    
+    - cross-python_{{ target_platform }}    # [build_platform != target_platform]
+    - python                                # [build_platform != target_platform]
+    - cython                                # [build_platform != target_platform]
+    - numpy                                 # [build_platform != target_platform]
   host:
     - python
     - pip
